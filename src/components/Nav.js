@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 const Nav = () => {
   return (
     <nav id='menu'>
-      <ul class='links'>
+      <ul className='links'>
         <li>
           <Link
             onClick={toggleNav}
