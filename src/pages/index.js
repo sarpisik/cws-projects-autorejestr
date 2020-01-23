@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import Layout from 'components/Layout';
@@ -11,9 +10,6 @@ import Service from '../components/Service';
 const IndexPage = ({ data }) => {
   return (
     <Layout pageName='home'>
-      <Helmet>
-        <title>Home Page</title>
-      </Helmet>
       <Banner image={data.banner.childImageSharp.fluid} />
       <Works />
       <About />
