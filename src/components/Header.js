@@ -4,7 +4,7 @@ import toggleNav from '../lib/toggleNav';
 import Nav from './Nav';
 
 const Header = () => {
-  scrollToTop = () => {
+  const scrollToTop = () => {
     scroll.scrollToTop();
   };
   return (
