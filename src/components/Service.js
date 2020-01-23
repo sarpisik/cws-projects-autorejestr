@@ -2,7 +2,7 @@ import React from 'react';
 
 const Service = () => {
   return (
-    <section className='wrapper'>
+    <section id='section4' className='wrapper'>
       <div className='inner'>
         <header className='special'>
           <h2>Faucibus consequat lorem</h2>

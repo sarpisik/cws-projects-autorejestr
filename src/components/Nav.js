@@ -1,18 +1,54 @@
 import React from 'react';
 import toggleNav from '../lib/toggleNav';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Nav = () => {
   return (
     <nav id='menu'>
       <ul class='links'>
         <li>
-          <a href='index.html'>Home</a>
+          <Link
+            activeClass='active'
+            to='banner'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href='elements.html'>Elements</a>
+          <Link
+            activeClass='active'
+            to='section2'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            Works
+          </Link>
         </li>
         <li>
-          <a href='generic.html'>Generic</a>
+          <Link
+            activeClass='active'
+            to='cta'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass='active'
+            to='section4'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            Service
+          </Link>
         </li>
       </ul>
       <a

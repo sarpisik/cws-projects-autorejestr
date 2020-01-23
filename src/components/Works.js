@@ -2,7 +2,7 @@ import React from 'react';
 
 const Works = () => {
   return (
-    <section className='wrapper'>
+    <section id='section2' className='wrapper'>
       <div className='inner'>
         <header className='special'>
           <h2>Sem turpis amet semper</h2>
