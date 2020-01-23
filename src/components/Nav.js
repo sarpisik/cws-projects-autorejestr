@@ -8,6 +8,7 @@ const Nav = () => {
       <ul class='links'>
         <li>
           <Link
+            onClick={toggleNav}
             activeClass='active'
             to='banner'
             spy={true}
@@ -19,6 +20,7 @@ const Nav = () => {
         </li>
         <li>
           <Link
+            onClick={toggleNav}
             activeClass='active'
             to='section2'
             spy={true}
@@ -30,6 +32,7 @@ const Nav = () => {
         </li>
         <li>
           <Link
+            onClick={toggleNav}
             activeClass='active'
             to='cta'
             spy={true}
@@ -41,6 +44,7 @@ const Nav = () => {
         </li>
         <li>
           <Link
+            onClick={toggleNav}
             activeClass='active'
             to='section4'
             spy={true}
