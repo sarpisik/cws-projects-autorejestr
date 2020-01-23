@@ -1,10 +1,15 @@
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image-es5';
 
-const Banner = () => {
+const Banner = ({ image }) => {
   return (
-    <section id='banner'>
-      <div class='inner'>
+    <BackgroundImage
+      id='banner'
+      Tag='section'
+      // className={className}
+      fluid={image}
+      backgroundColor={`#040e18`}>
+      <div className='inner'>
         <h1>Industrious</h1>
         <p>
           A responsive business oriented template with a video background
@@ -13,8 +18,7 @@ const Banner = () => {
           under the Creative Commons License.
         </p>
       </div>
-      {/* <video autoplay loop muted playsinline src='images/banner.mp4'></video> */}
-    </section>
+    </BackgroundImage>
   );
 };
 
