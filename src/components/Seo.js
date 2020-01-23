@@ -16,7 +16,7 @@ const detailsQuery = graphql`
   }
 `;
 
-function SEO({ description, lang, meta, keywords = [], title }) {
+function SEO({ description, lang: language, meta, keywords = [], title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, keywords = [], title }) {
         const { siteMetadata } = data.site;
 
         const metaDescription = description || siteMetadata.description;
-        const lang = lang || siteMetadata.lang;
+        const lang = language || siteMetadata.lang;
         return (
           <Helmet
             htmlAttributes={{
