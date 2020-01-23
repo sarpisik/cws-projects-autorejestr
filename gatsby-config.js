@@ -6,6 +6,12 @@ module.exports = {
     siteUrl: 'https://www.autorejestr.pl'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'pl'
+      }
+    },
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
