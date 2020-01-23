@@ -45,6 +45,11 @@ body {
     line-height: inherit;
     padding: 0 1.25rem;
     text-decoration: none;
+
+    > img {
+      height: 60%;
+      vertical-align: middle;
+    }
   }
 
   > nav {
