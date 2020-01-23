@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Container from 'components/Container';
+const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
@@ -63,9 +63,14 @@ const Footer = () => {
             </ul>
           </section>
         </div>
+        <div className='copyright'>&copy;{year} Autorejestr</div>
         <div className='copyright'>
-          &copy; Untitled. Photos <a href='https://unsplash.co'>Unsplash</a>,
-          Video <a href='https://coverr.co'>Coverr</a>.
+          <a
+            href='https://sarpisik.com'
+            className='smooth-bottom'
+            title='Web Developer'>
+            Made By SARP IŞIK
+          </a>
         </div>
       </div>
     </footer>
