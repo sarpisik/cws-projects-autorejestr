@@ -46,7 +46,8 @@ $accent: accent2;
           line-height: 3.5rem;
           text-decoration: none;
 
-          &:hover {
+          &:hover,
+          .active {
             color: _palette($accent, fg-bold);
           }
         }
