@@ -1,19 +1,19 @@
 {
-  "name": "gatsby-starter-sass",
-  "description": "A Gatsby starter with Sass and no assumptions",
+  "name": "cws-projects-auto-rejest",
+  "description": "A Gatsby single page application",
   "version": "0.1.2",
-  "author": "Colby Fayock <hello@colbyfayock.com>",
+  "author": "Sarp Isik <wdsarpisik@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.15.9",
-    "gatsby-plugin-react-helmet": "^3.1.6",
-    "gatsby-plugin-resolve-src": "^2.0.0",
-    "gatsby-plugin-sass": "^2.1.13",
-    "gatsby-source-filesystem": "^2.1.21",
-    "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "gatsby": "2.15.9",
+    "gatsby-plugin-react-helmet": "3.1.6",
+    "gatsby-plugin-resolve-src": "2.0.0",
+    "gatsby-plugin-sass": "2.1.13",
+    "gatsby-source-filesystem": "2.1.21",
+    "node-sass": "4.12.0",
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-helmet": "5.2.1"
   },
   "devDependencies": {},
   "keywords": [
@@ -25,17 +25,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "lint": "Get started linting your code with Eslint and stylelint",
-    "format": "Get started formatting your code with Eslint, Prettier, and stylelint",
-    "start": "yarn develop",
-    "serve": "gatsby serve",
-    "test": "echo 'Write tests! -> https://gatsby.dev/unit-testing'"
+    "start": "gatsby start",
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/gatsby-starter-sass"
+    "url": "https://github.com/colbyfayock/cws-projects-auto-rejest"
   },
   "bugs": {
-    "url": "https://github.com/colbyfayock/gatsby-starter-sass/issues"
+    "url": "https://github.com/colbyfayock/cws-projects-auto-rejest/issues"
   }
 }
