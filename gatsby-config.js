@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    title: `Autorejestr`,
+    description: `Autorejestr`,
+    author: `@sarpisik`,
+    siteUrl: 'https://www.Autorejestr.pl'
+  },
   plugins: [
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-sass',
