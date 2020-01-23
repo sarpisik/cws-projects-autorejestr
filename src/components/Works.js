@@ -2,9 +2,9 @@ import React from 'react';
 
 const Works = () => {
   return (
-    <section class='wrapper'>
-      <div class='inner'>
-        <header class='special'>
+    <section className='wrapper'>
+      <div className='inner'>
+        <header className='special'>
           <h2>Sem turpis amet semper</h2>
           <p>
             In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim
@@ -12,12 +12,12 @@ const Works = () => {
             accumsan erat tempus amet porttitor.
           </p>
         </header>
-        <div class='highlights'>
+        <div className='highlights'>
           <section>
-            <div class='content'>
+            <div className='content'>
               <header>
-                <a href='#' class='icon fa-vcard-o'>
-                  <span class='label'>Icon</span>
+                <a href='#' className='icon fa-vcard-o'>
+                  <span className='label'>Icon</span>
                 </a>
                 <h3>Feugiat consequat</h3>
               </header>
@@ -28,10 +28,10 @@ const Works = () => {
             </div>
           </section>
           <section>
-            <div class='content'>
+            <div className='content'>
               <header>
-                <a href='#' class='icon fa-files-o'>
-                  <span class='label'>Icon</span>
+                <a href='#' className='icon fa-files-o'>
+                  <span className='label'>Icon</span>
                 </a>
                 <h3>Ante sem integer</h3>
               </header>
@@ -42,10 +42,10 @@ const Works = () => {
             </div>
           </section>
           <section>
-            <div class='content'>
+            <div className='content'>
               <header>
-                <a href='#' class='icon fa-floppy-o'>
-                  <span class='label'>Icon</span>
+                <a href='#' className='icon fa-floppy-o'>
+                  <span className='label'>Icon</span>
                 </a>
                 <h3>Ipsum consequat</h3>
               </header>
@@ -56,10 +56,10 @@ const Works = () => {
             </div>
           </section>
           <section>
-            <div class='content'>
+            <div className='content'>
               <header>
-                <a href='#' class='icon fa-line-chart'>
-                  <span class='label'>Icon</span>
+                <a href='#' className='icon fa-line-chart'>
+                  <span className='label'>Icon</span>
                 </a>
                 <h3>Interdum gravida</h3>
               </header>
@@ -70,10 +70,10 @@ const Works = () => {
             </div>
           </section>
           <section>
-            <div class='content'>
+            <div className='content'>
               <header>
-                <a href='#' class='icon fa-paper-plane-o'>
-                  <span class='label'>Icon</span>
+                <a href='#' className='icon fa-paper-plane-o'>
+                  <span className='label'>Icon</span>
                 </a>
                 <h3>Faucibus consequat</h3>
               </header>
@@ -84,10 +84,10 @@ const Works = () => {
             </div>
           </section>
           <section>
-            <div class='content'>
+            <div className='content'>
               <header>
-                <a href='#' class='icon fa-qrcode'>
-                  <span class='label'>Icon</span>
+                <a href='#' className='icon fa-qrcode'>
+                  <span className='label'>Icon</span>
                 </a>
                 <h3>Accumsan viverra</h3>
               </header>
