@@ -3,7 +3,7 @@ module.exports = {
     title: `Autorejestr`,
     description: `Autorejestr`,
     author: `@sarpisik`,
-    siteUrl: 'https://www.Autorejestr.pl'
+    siteUrl: 'https://www.autorejestr.pl'
   },
   plugins: [
     'gatsby-plugin-resolve-src',
