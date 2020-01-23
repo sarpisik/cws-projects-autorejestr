@@ -1,5 +1,6 @@
 import React from 'react';
 import toggleNav from '../lib/toggleNav';
+import Nav from './Nav';
 
 const Header = () => {
   return (
@@ -7,9 +8,10 @@ const Header = () => {
       <a class='logo' href='index.html'>
         Industrious
       </a>
-      <nav>
+      <nav className='header-menu'>
         <a onClick={toggleNav}>Menu</a>
       </nav>
+      <Nav />
     </header>
   );
 };

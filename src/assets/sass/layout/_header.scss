@@ -92,6 +92,12 @@ body {
       }
     }
   }
+
+  @include breakpoint('>=small') {
+    > nav.header-menu {
+      display: none;
+    }
+  }
 }
 
 @include breakpoint('<=medium') {

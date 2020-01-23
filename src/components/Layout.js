@@ -6,7 +6,6 @@ import 'assets/sass/main.scss';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import Nav from './Nav';
 
 const Layout = ({ children, pageName }) => {
   let className = '';
@@ -21,7 +20,6 @@ const Layout = ({ children, pageName }) => {
         <title>Gatsby Site</title>
       </Helmet>
       <Header />
-      <Nav />
       <main>{children}</main>
       <Footer />
     </>
