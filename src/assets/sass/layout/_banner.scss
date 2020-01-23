@@ -21,10 +21,14 @@
   width: 100%;
 
   > .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgba($color: #000000, $alpha: 0.5);
-    height: 100%;
+    height: calc(100vh - 3.25rem);
     margin: 0;
-    padding: 5rem;
+    padding: 1rem;
     width: 100%;
 
     > :last-child {
@@ -86,6 +90,11 @@
   @include breakpoint('<=large') {
     video {
       display: none;
+    }
+  }
+  @include breakpoint('>=small') {
+    > .inner {
+      //   padding: 10rem 5rem;
     }
   }
 
