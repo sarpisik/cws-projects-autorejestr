@@ -20,12 +20,10 @@ const Layout = ({ children, pageName }) => {
       <Helmet bodyAttributes={{ class: className }}>
         <title>Gatsby Site</title>
       </Helmet>
-      <div className='wrapper'>
-        <Header />
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <Header />
+      <Nav />
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };
