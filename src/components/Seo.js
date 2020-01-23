@@ -5,11 +5,13 @@ import { StaticQuery, graphql } from 'gatsby';
 
 const detailsQuery = graphql`
   query SEOQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-      author
+    site: site {
+      siteMetadata {
+        title
+        description
+        author
+        siteUrl
+      }
     }
   }
 `;
@@ -19,10 +21,13 @@ function SEO({ description, lang, meta, keywords = [], title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        if (!data.site) {
+        if (!data.site || !data.site.siteMetadata) {
           return;
         }
-        const metaDescription = description || data.site.description;
+        const { siteMetadata } = data.site;
+
+        const metaDescription = description || siteMetadata.description;
+        const lang = lang || siteMetadata.lang;
         return (
           <Helmet
             htmlAttributes={{
@@ -30,7 +35,7 @@ function SEO({ description, lang, meta, keywords = [], title }) {
             }}
             title={title}
             titleTemplate={
-              title === data.site.title ? '%s' : `%s | ${data.site.title}`
+              title === siteMetadata.title ? '%s' : `%s | ${siteMetadata.title}`
             }
             meta={[
               {
@@ -55,7 +60,7 @@ function SEO({ description, lang, meta, keywords = [], title }) {
               },
               {
                 name: 'twitter:creator',
-                content: data.site.author
+                content: siteMetadata.author
               },
               {
                 name: 'twitter:title',

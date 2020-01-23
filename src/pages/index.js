@@ -6,10 +6,12 @@ import Banner from '../components/Banner';
 import Works from '../components/Works';
 import About from '../components/About';
 import Service from '../components/Service';
+import SEO from '../components/Seo';
 
 const IndexPage = ({ data }) => {
   return (
     <Layout pageName='home'>
+      <SEO title='Home' />
       <Banner image={data.banner.childImageSharp.fluid} />
       <Works />
       <About />
