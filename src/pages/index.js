@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Layout from 'components/Layout';
 import Banner from '../components/Banner';
 import Works from '../components/Works';
+import About from '../components/About';
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       </Helmet>
       <Banner />
       <Works />
+      <About />
     </Layout>
   );
 };
