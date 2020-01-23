@@ -1,4 +1,5 @@
 import React from 'react';
+import toggleNav from '../lib/toggleNav';
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
         Industrious
       </a>
       <nav>
-        <a href='#menu'>Menu</a>
+        <a onClick={toggleNav}>Menu</a>
       </nav>
     </header>
   );

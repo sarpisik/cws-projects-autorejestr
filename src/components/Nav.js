@@ -1,4 +1,5 @@
 import React from 'react';
+import toggleNav from '../lib/toggleNav';
 
 const Nav = () => {
   return (
@@ -14,6 +15,11 @@ const Nav = () => {
           <a href='generic.html'>Generic</a>
         </li>
       </ul>
+      <a
+        className='close'
+        onClick={toggleNav}
+        // style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);'
+      ></a>
     </nav>
   );
 };
