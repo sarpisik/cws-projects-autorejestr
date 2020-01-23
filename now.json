@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "GATSBY_GOOGLE_MAPS_API": "@cws-projects-autorejestr-google-maps-api"
+    }
+  }
+}
