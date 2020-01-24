@@ -17,8 +17,8 @@ const WorkContentContainer = ({ children }) => (
 
 const WorkContainer = ({ children }) => <section>{children}</section>;
 
-const Work = ({ icon, title, description }) => (
-    <WorkContainer>
+const Work = ({ icon, title, description }, index) => (
+    <WorkContainer key={index}>
         <WorkContentContainer>
             <header>
                 <Icon icon={icon} />
@@ -41,88 +41,7 @@ const Works = () => {
                         ornare aliquet accumsan erat tempus amet porttitor.
                     </p>
                 </header>
-                <div className='highlights'>
-                    <Work
-                        icon='fa-vcard-o'
-                        title='Feugiat consequat'
-                        description='Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.'
-                    />
-                    <section>
-                        <div className='content'>
-                            <header>
-                                <a href='#' className='icon fa-files-o'>
-                                    <span className='label'>Icon</span>
-                                </a>
-                                <h3>Ante sem integer</h3>
-                            </header>
-                            <p>
-                                Nunc lacinia ante nunc ac lobortis ipsum.
-                                Interdum adipiscing gravida odio porttitor sem
-                                non mi integer non faucibus.
-                            </p>
-                        </div>
-                    </section>
-                    <section>
-                        <div className='content'>
-                            <header>
-                                <a href='#' className='icon fa-floppy-o'>
-                                    <span className='label'>Icon</span>
-                                </a>
-                                <h3>Ipsum consequat</h3>
-                            </header>
-                            <p>
-                                Nunc lacinia ante nunc ac lobortis ipsum.
-                                Interdum adipiscing gravida odio porttitor sem
-                                non mi integer non faucibus.
-                            </p>
-                        </div>
-                    </section>
-                    <section>
-                        <div className='content'>
-                            <header>
-                                <a href='#' className='icon fa-line-chart'>
-                                    <span className='label'>Icon</span>
-                                </a>
-                                <h3>Interdum gravida</h3>
-                            </header>
-                            <p>
-                                Nunc lacinia ante nunc ac lobortis ipsum.
-                                Interdum adipiscing gravida odio porttitor sem
-                                non mi integer non faucibus.
-                            </p>
-                        </div>
-                    </section>
-                    <section>
-                        <div className='content'>
-                            <header>
-                                <a href='#' className='icon fa-paper-plane-o'>
-                                    <span className='label'>Icon</span>
-                                </a>
-                                <h3>Faucibus consequat</h3>
-                            </header>
-                            <p>
-                                Nunc lacinia ante nunc ac lobortis ipsum.
-                                Interdum adipiscing gravida odio porttitor sem
-                                non mi integer non faucibus.
-                            </p>
-                        </div>
-                    </section>
-                    <section>
-                        <div className='content'>
-                            <header>
-                                <a href='#' className='icon fa-qrcode'>
-                                    <span className='label'>Icon</span>
-                                </a>
-                                <h3>Accumsan viverra</h3>
-                            </header>
-                            <p>
-                                Nunc lacinia ante nunc ac lobortis ipsum.
-                                Interdum adipiscing gravida odio porttitor sem
-                                non mi integer non faucibus.
-                            </p>
-                        </div>
-                    </section>
-                </div>
+                <div className='highlights'>{works.map(Work)}</div>
             </div>
         </section>
     );
