@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Autorejestr`,
-    description: `Autorejestr`,
+    description: `Autorejestr description`,
     author: `@sarpisik`,
     siteUrl: 'https://www.autorejestr.pl'
   },
