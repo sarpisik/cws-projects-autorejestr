@@ -16,19 +16,17 @@ const WorkContentContainer = ({ children }) => (
 
 const WorkContainer = ({ children }) => <section>{children}</section>;
 
-const Work = ({ icon, title, description }) => {
-    return (
-        <WorkContainer>
-            <WorkContentContainer>
-                <header>
-                    <Icon icon={icon} />
-                    <Title text={title} />
-                </header>
-                <Description text={description} />
-            </WorkContentContainer>
-        </WorkContainer>
-    );
-};
+const Work = ({ icon, title, description }) => (
+    <WorkContainer>
+        <WorkContentContainer>
+            <header>
+                <Icon icon={icon} />
+                <Title text={title} />
+            </header>
+            <Description text={description} />
+        </WorkContentContainer>
+    </WorkContainer>
+);
 
 const Works = () => {
     return (
