@@ -48,54 +48,12 @@
     }
   }
 
-  //   &:before {
-  //     @include vendor('transition', 'opacity 3s ease');
-  //     @include vendor('transition-delay', '#{_duration(banner) * 1.25}');
-  //     background: _palette(accent2, bg);
-  //     content: '';
-  //     display: block;
-  //     height: 100%;
-  //     left: 0;
-  //     opacity: 0.45;
-  //     position: absolute;
-  //     top: 0;
-  //     width: 100%;
-  //     z-index: 1;
-  //   }
-
-  //   &:after {
-  //     background-color: rgba($color: #000000, $alpha: 1);
-  //     content: ' ';
-  //     display: block;
-  //     height: 100%;
-  //     left: 0;
-  //     opacity: 0.6;
-  //     position: absolute;
-  //     top: 0;
-  //     width: 100%;
-  //     z-index: 1;
-  //   }
-
   &.small {
     height: 30vh !important;
     min-height: 30vh;
   }
 
-  @include breakpoint('<=large') {
-    video {
-      display: none;
-    }
-  }
-  @include breakpoint('>=small') {
-    > .inner {
-      //   padding: 10rem 5rem;
-    }
-  }
-
   @include breakpoint('<=small') {
-    // height: auto !important;
-    // min-height: 0;
-
     h1 {
       font-size: 1.75rem;
       margin-bottom: 0.5rem;
