@@ -1,13 +1,17 @@
 import React from 'react';
 
+const Icon = ({ icon }) => (
+    <a href='#' className={`icon ${icon}`}>
+        <span className='label'>Icon</span>
+    </a>
+);
+
 const Work = ({ icon, title, description }) => {
     return (
         <section>
             <div className='content'>
                 <header>
-                    <a href='#' className={`icon ${icon}`}>
-                        <span className='label'>Icon</span>
-                    </a>
+                    <Icon icon={icon} />
                     <h3>{title}</h3>
                 </header>
                 <p>{description}</p>
