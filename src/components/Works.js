@@ -8,6 +8,8 @@ const Icon = ({ icon }) => (
 
 const Title = ({ text }) => <h3>{text}</h3>;
 
+const Description = ({ text }) => <p>{text}</p>;
+
 const Work = ({ icon, title, description }) => {
     return (
         <section>
@@ -16,7 +18,7 @@ const Work = ({ icon, title, description }) => {
                     <Icon icon={icon} />
                     <Title text={title} />
                 </header>
-                <p>{description}</p>
+                <Description text={description} />
             </div>
         </section>
     );
