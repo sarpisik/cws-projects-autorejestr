@@ -6,13 +6,15 @@ const Icon = ({ icon }) => (
     </a>
 );
 
+const Title = ({ text }) => <h3>{text}</h3>;
+
 const Work = ({ icon, title, description }) => {
     return (
         <section>
             <div className='content'>
                 <header>
                     <Icon icon={icon} />
-                    <h3>{title}</h3>
+                    <Title text={title} />
                 </header>
                 <p>{description}</p>
             </div>
