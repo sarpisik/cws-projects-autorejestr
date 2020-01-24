@@ -1,4 +1,5 @@
 import React from 'react';
+import works from '../constants/works.json';
 
 const Icon = ({ icon }) => (
     <a href='#' className={`icon ${icon}`}>
