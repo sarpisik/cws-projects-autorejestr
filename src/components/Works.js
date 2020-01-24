@@ -14,9 +14,11 @@ const WorkContentContainer = ({ children }) => (
     <div className='content'>{children}</div>
 );
 
+const WorkContainer = ({ children }) => <section>{children}</section>;
+
 const Work = ({ icon, title, description }) => {
     return (
-        <section>
+        <WorkContainer>
             <WorkContentContainer>
                 <header>
                     <Icon icon={icon} />
@@ -24,7 +26,7 @@ const Work = ({ icon, title, description }) => {
                 </header>
                 <Description text={description} />
             </WorkContentContainer>
-        </section>
+        </WorkContainer>
     );
 };
 
