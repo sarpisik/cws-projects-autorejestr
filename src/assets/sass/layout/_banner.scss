@@ -7,14 +7,8 @@
   @include vendor('align-items', 'center');
   @include vendor('display', 'flex');
   @include vendor('justify-content', 'center');
-  // background-image: url('../../images/banner.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   border-top: 0;
   display: -ms-flexbox;
-  //   height: 35rem !important;
-  //   min-height: 35rem;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -26,7 +20,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: rgba($color: #000000, $alpha: 0.5);
-    height: calc(100vh - 3.25rem);
+    height: calc(100vh - 5.25rem);
     margin: 0;
     padding: 1rem;
     width: 100%;
