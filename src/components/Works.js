@@ -5,16 +5,12 @@ const Work = ({ icon, title, description }) => {
         <section>
             <div className='content'>
                 <header>
-                    <a href='#' className='icon fa-vcard-o'>
+                    <a href='#' className={`icon ${icon}`}>
                         <span className='label'>Icon</span>
                     </a>
-                    <h3>Feugiat consequat</h3>
+                    <h3>{title}</h3>
                 </header>
-                <p>
-                    Nunc lacinia ante nunc ac lobortis ipsum. Interdum
-                    adipiscing gravida odio porttitor sem non mi integer non
-                    faucibus.
-                </p>
+                <p>{description}</p>
             </div>
         </section>
     );
@@ -33,7 +29,11 @@ const Works = () => {
                     </p>
                 </header>
                 <div className='highlights'>
-                    <Work />
+                    <Work
+                        icon='fa-vcard-o'
+                        title='Feugiat consequat'
+                        description='Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.'
+                    />
                     <section>
                         <div className='content'>
                             <header>
