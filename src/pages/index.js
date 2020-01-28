@@ -11,6 +11,7 @@ import SEO from '../components/Seo';
 import Registration from '../components/Registration';
 import Insurance from '../components/insurance';
 import Translations from '../components/Translations';
+import Section from '../components/Section';
 
 const IndexPage = ({ data }) => {
     return (
@@ -18,6 +19,22 @@ const IndexPage = ({ data }) => {
             <SEO title='Home' />
             <Banner image={data.banner.childImageSharp.fluid} />
             <About />
+            <Section
+                id='section2'
+                title='DLACZEGO MY?'
+                contents={[
+                    {
+                        tag: 'p',
+                        content:
+                            'Naszą maksymą jest - szybki czas realizacji, miła obsługa oraz pełen profesjonalizm. Dołącz do grona naszych zadowolonych klientów.'
+                    },
+                    {
+                        tag: 'p',
+                        content:
+                            'Stale uczestniczymy w szkoleniach branżowych, dzięki czemu nasi klienci mogą być pewni, że nasza wiedza jest na bieżąco udoskonalana. Nasze kwalifikacje i doświadczenie sprawiają, że powierzone nam zadania są szybko i profesjonalnie załatwiane.'
+                    }
+                ]}
+            />
             <WhyUs />
             <Registration />
             <Insurance />
