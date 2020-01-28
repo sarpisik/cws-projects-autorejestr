@@ -3,112 +3,111 @@
 $accent: accent2;
 
 body {
-  padding-top: _size(header-height) + 2rem;
+    padding-top: _size(header-height) + 2rem;
 
-  &:before {
-    content: ' ';
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.05;
-  }
+    &:before {
+        content: ' ';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.05;
+    }
 }
 
 #header {
-  @include vendor('align-items', 'center');
-  @include vendor('display', 'flex');
-  @include vendor('justify-content', 'space-between');
-  background: _palette($accent, bg);
-  color: _palette($accent, fg);
-  cursor: default;
-  height: _size(header-height) + 2rem;
-  left: 0;
-  line-height: _size(header-height);
+    @include vendor('align-items', 'center');
+    @include vendor('display', 'flex');
+    @include vendor('justify-content', 'space-between');
+    background: _palette($accent, bg);
+    color: _palette($accent, fg);
+    cursor: default;
+    height: _size(header-height) + 2rem;
+    left: 0;
+    line-height: _size(header-height);
 
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+    padding: 1.25rem 1rem;
 
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: _misc(z-index-base) + 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: _misc(z-index-base) + 1;
 
-  > .logo {
-    height: 100%;
-    padding: 0 1.25rem;
-    text-decoration: none;
+    > .logo {
+        height: 100%;
+        padding: 0 1.25rem;
+        text-decoration: none;
 
-    > img {
-      height: 60%;
-      vertical-align: middle;
-    }
-  }
-
-  > nav {
-    > a {
-      color: inherit;
-      display: inline-block;
-      padding: 0 0.75rem;
-      text-decoration: none;
-
-      &:hover {
-        color: _palette($accent, fg-bold);
-      }
-
-      &[href='#menu'] {
-        @include icon;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-        &:before {
-          content: '\f0c9';
-          margin: 0 0.5rem 0 0;
+        > img {
+            height: 60%;
+            vertical-align: middle;
         }
-      }
-
-      & + a[href='#menu']:last-child {
-        border-left: solid 1px _palette($accent, border);
-        margin-left: 0.5rem;
-        padding-left: 1.25rem;
-      }
-
-      &:last-child {
-        padding-right: 1.25rem;
-      }
-
-      @include breakpoint('<=small') {
-        padding: 0 0.5rem;
-
-        & + a[href='#menu']:last-child {
-          margin-left: 0.25rem;
-          padding-left: 1rem;
-        }
-
-        &:last-child {
-          padding-right: 1rem;
-        }
-      }
     }
-  }
 
-  @include breakpoint('>=small') {
-    > nav.header-menu {
-      display: none;
+    > nav {
+        > a {
+            color: inherit;
+            display: inline-block;
+            padding: 0 0.75rem;
+            text-decoration: none;
+
+            &:hover {
+                color: _palette($accent, fg-bold);
+            }
+
+            &[href='#menu'] {
+                @include icon;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+                &:before {
+                    content: '\f0c9';
+                    margin: 0 0.5rem 0 0;
+                }
+            }
+
+            & + a[href='#menu']:last-child {
+                border-left: solid 1px _palette($accent, border);
+                margin-left: 0.5rem;
+                padding-left: 1.25rem;
+            }
+
+            &:last-child {
+                padding-right: 1.25rem;
+            }
+
+            @include breakpoint('<=small') {
+                padding: 0 0.5rem;
+
+                & + a[href='#menu']:last-child {
+                    margin-left: 0.25rem;
+                    padding-left: 1rem;
+                }
+
+                &:last-child {
+                    padding-right: 1rem;
+                }
+            }
+        }
     }
-  }
+
+    @include breakpoint('>=large') {
+        > nav.header-menu {
+            display: none;
+        }
+    }
 }
 
 @include breakpoint('<=medium') {
-  #header {
-    line-height: 44px;
-  }
+    #header {
+        line-height: 44px;
+    }
 }
 
 @include breakpoint('<=xsmall') {
-  #header {
-    min-width: 320px;
-  }
+    #header {
+        min-width: 320px;
+    }
 }
