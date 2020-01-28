@@ -1,5 +1,5 @@
 import React from 'react';
-import GoogleMap from './GoogleMap';
+// import GoogleMap from './GoogleMap';
 
 const About = () => {
     return (
