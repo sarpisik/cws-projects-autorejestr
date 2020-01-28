@@ -10,11 +10,13 @@ const Banner = ({ image }) => {
             fluid={image}
             backgroundColor={`#040e18`}>
             <div className='inner'>
-                <h1>Autorejestr</h1>
-                <p>
-                    Szybka rejestracja pojazdów krajowych i sprowadzonych z
-                    zagranicy
-                </p>
+                <header className='special'>
+                    <h1>Autorejestr</h1>
+                    <p>
+                        Szybka rejestracja pojazdów krajowych i sprowadzonych z
+                        zagranicy
+                    </p>
+                </header>
                 <div>
                     <Link
                         activeClass='active'

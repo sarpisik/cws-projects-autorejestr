@@ -4,13 +4,8 @@ import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import Banner from '../components/Banner';
 import Works from '../components/Works';
-import About from '../components/About';
-import WhyUs from '../components/WhyUs';
 import Service from '../components/Service';
 import SEO from '../components/Seo';
-import Registration from '../components/Registration';
-import Insurance from '../components/insurance';
-import Translations from '../components/Translations';
 import Section from '../components/Section';
 
 const IndexPage = ({ data }) => {
@@ -18,7 +13,30 @@ const IndexPage = ({ data }) => {
         <Layout pageName='home'>
             <SEO title='Home' />
             <Banner image={data.banner.childImageSharp.fluid} />
-            <About />
+            <Section
+                id='section1'
+                title='O Nas'
+                contents={[
+                    {
+                        tag: 'p',
+                        content: [
+                            {
+                                tag: 'strong',
+                                content: 'AUTOREJESTR.COM '
+                            },
+                            {
+                                content:
+                                    'to prężnie rozwijająca się firma. Oferujemy profesjonalną usługę w zakresie rejestracji samochodów osobowych, dostawczych i ciężarowych zakupionych w Polsce jak i sprowadzonych z zagranicy.'
+                            }
+                        ]
+                    },
+                    {
+                        tag: 'p',
+                        content:
+                            'Nasza firma zajmuje się również ubezpieczeniami komunikacyjnymi, na życie oraz nieruchomości. Współpracujemy z kilkoma największymi firmami działającymi w Polsce, dlatego jesteśmy w stanie przygotować Państwu najkorzystniejszą ofertę ubezpieczeniową, w pełni spełniającą Państwa wymagania.'
+                    }
+                ]}
+            />
             <Section
                 id='section2'
                 title='DLACZEGO MY?'
@@ -35,12 +53,50 @@ const IndexPage = ({ data }) => {
                     }
                 ]}
             />
-            <WhyUs />
-            <Registration />
-            <Insurance />
-            <Translations />
-            <Works />
-            <Service />
+            <Section
+                id='section3'
+                title='REJESTRACJA POJAZDÓW'
+                contents={[
+                    {
+                        tag: 'p',
+                        content:
+                            'Nasza oferta obejmuje rejestrację wszelkiego rodzaju pojazdów krajowych, jak i sprowadzanych z zagranicy. Nasza ogromne doświadczenie gwarantuje Państwu, że zlecona nam usługa zostanie profesjonalnie wykonana.'
+                    },
+                    {
+                        tag: 'p',
+                        content:
+                            'Z nami oszczędzą Państwo: CZAS PIENIĄDZE NERWY Zadzwoń teraz i zamów rejestracje samochodu z dojazdem do klienta, Tel: 608 723 482'
+                    }
+                ]}
+            />
+            <Section
+                id='section4'
+                title='UBEZPIECZENIA'
+                contents={[
+                    {
+                        tag: 'p',
+                        content:
+                            'Dodatkowo świadczymy szeroki wachlarz usług ubezpieczeniowych, również komunikacyjnych. Naszymi głównymi partnerami są MTU oraz GENERALI i PROAMA.'
+                    },
+                    {
+                        tag: 'p',
+                        content: 'loga ubezpieczalni'
+                    }
+                ]}
+            />
+            <Section
+                id='section5'
+                title='TŁUMACZENIA'
+                contents={[
+                    {
+                        tag: 'p',
+                        content:
+                            'Firma Autorejestr.com współpracuje z tłumaczami przysięgłymi wszystkich języków unijnych jak i spoza unii. Tłumaczymy dokumenty samochodów jak i inne niestandardowe teksty. Nasze ceny są konkurencyjne. Oferujemy Państwu usługi na najwyższym poziomie gwarantując pewność bezpieczeństwa Państwa dokumentów.'
+                    }
+                ]}
+            />
+            {/* <Works />
+            <Service /> */}
         </Layout>
     );
 };

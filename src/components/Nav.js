@@ -10,7 +10,7 @@ const Nav = () => {
                     <Link
                         onClick={toggleNav}
                         activeClass='active'
-                        to='about-us'
+                        to='section1'
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -22,7 +22,7 @@ const Nav = () => {
                     <Link
                         onClick={toggleNav}
                         activeClass='active'
-                        to='why-us'
+                        to='section2'
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -34,7 +34,7 @@ const Nav = () => {
                     <Link
                         onClick={toggleNav}
                         activeClass='active'
-                        to='registration'
+                        to='section3'
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -46,7 +46,7 @@ const Nav = () => {
                     <Link
                         onClick={toggleNav}
                         activeClass='active'
-                        to='insurance'
+                        to='section4'
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -58,7 +58,7 @@ const Nav = () => {
                     <Link
                         onClick={toggleNav}
                         activeClass='active'
-                        to='translations'
+                        to='section5'
                         spy={true}
                         smooth={true}
                         offset={-70}
