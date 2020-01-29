@@ -11,13 +11,14 @@ const RenderContent = ({ tag: Component, content }, index) => {
     return content;
 };
 
-const Section = ({ id, title, contents }) => (
+const Section = ({ id, title, contents, innerClassName, children }) => (
     <section id={id} className='wrapper'>
-        <div className='inner'>
+        <div className={`inner ${innerClassName}`}>
             <header className='special'>
                 <h2>{title}</h2>
                 {contents.map(RenderContent)}
             </header>
+            {children}
         </div>
     </section>
 );

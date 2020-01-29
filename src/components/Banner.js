@@ -17,26 +17,30 @@ const Banner = ({ image }) => {
                         zagranicy
                     </p>
                 </header>
-                <div>
-                    <Link
-                        activeClass='active'
-                        to='section2'
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}>
-                        Learn more
-                    </Link>
-                    <Link
-                        activeClass='active'
-                        to='cta'
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}>
-                        Contact
-                    </Link>
-                </div>
+                <ul class='actions'>
+                    <li>
+                        <Link
+                            className='button primary'
+                            to='section1'
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}>
+                            Zapoznaj się z naszą ofertą
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className='button'
+                            to='footer'
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}>
+                            Skontaktuj się z nami
+                        </Link>
+                    </li>
+                </ul>
             </div>
         </BackgroundImage>
     );

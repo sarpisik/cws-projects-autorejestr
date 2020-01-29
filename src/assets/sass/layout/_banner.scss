@@ -1,81 +1,99 @@
 /* Banner */
 
 #banner {
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  @include color(accent2);
-  @include vendor('align-items', 'center');
-  @include vendor('display', 'flex');
-  @include vendor('justify-content', 'center');
-  border-top: 0;
-  display: -ms-flexbox;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%;
-
-  > .inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    height: calc(100vh - 5.25rem);
-    margin: 0;
-    padding: 1rem;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    @include color(accent2);
+    @include vendor('align-items', 'center');
+    @include vendor('display', 'flex');
+    @include vendor('justify-content', 'center');
+    border-top: 0;
+    color: _palette(accent2, fg-bold);
+    display: -ms-flexbox;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
     width: 100%;
 
-    > :last-child {
-      margin-bottom: 0;
+    > .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100vh - 5.25rem);
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+
+        &:after {
+            background: linear-gradient(
+                135deg,
+                _palette(accent1, bg) 0%,
+                _palette(accent2, bg) 74%
+            );
+            content: ' ';
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            webkit-linear-gradientidth: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
     }
-  }
 
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.5rem;
-  }
-
-  a {
-    color: _palette(accent2, fg);
-    text-decoration: none;
-
-    &:hover {
-      color: _palette(accent2, fg-bold);
-    }
-  }
-
-  &.small {
-    height: 30vh !important;
-    min-height: 30vh;
-  }
-
-  @include breakpoint('<=small') {
     h1 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-      padding-bottom: 0;
+        font-size: 4rem;
+        margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
-    br {
-      display: none;
+    a {
+        color: _palette(accent2, fg);
+        text-decoration: none;
+
+        &:hover {
+            color: _palette(accent2, fg-bold);
+        }
     }
 
-    .button {
-      width: 100%;
+    &.small {
+        height: 30vh !important;
+        min-height: 30vh;
     }
-  }
 
-  @include breakpoint('<=xsmall') {
-    p {
-      font-size: 1rem;
+    @include breakpoint('<=small') {
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        br {
+            display: none;
+        }
+
+        .button {
+            width: 100%;
+        }
     }
-  }
+
+    @include breakpoint('<=xsmall') {
+        p {
+            font-size: 1rem;
+        }
+    }
 }

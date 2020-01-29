@@ -8,6 +8,12 @@ import Service from '../components/Service';
 import SEO from '../components/Seo';
 import Section from '../components/Section';
 
+// Icons
+import addressCard from '../assets/icons/address-card-regular.svg';
+import chartLine from '../assets/icons/chart-line-solid.svg';
+import landmark from '../assets/icons/landmark-solid.svg';
+import tasks from '../assets/icons/tasks-solid.svg';
+
 const IndexPage = ({ data }) => {
     return (
         <Layout pageName='home'>
@@ -26,14 +32,33 @@ const IndexPage = ({ data }) => {
                             },
                             {
                                 content:
-                                    'to prężnie rozwijająca się firma. Oferujemy profesjonalną usługę w zakresie rejestracji samochodów osobowych, dostawczych i ciężarowych zakupionych w Polsce jak i sprowadzonych z zagranicy.'
+                                    'to prężnie rozwijająca się firma. Oferujemy profesjonalną usługę w zakresie '
+                            },
+                            {
+                                tag: 'strong',
+                                content: 'rejestracji samochodów'
+                            },
+                            {
+                                content:
+                                    ' osobowych, dostawczych i ciężarowych zakupionych w Polsce jak i sprowadzonych z zagranicy.'
                             }
                         ]
                     },
                     {
                         tag: 'p',
-                        content:
-                            'Nasza firma zajmuje się również ubezpieczeniami komunikacyjnymi, na życie oraz nieruchomości. Współpracujemy z kilkoma największymi firmami działającymi w Polsce, dlatego jesteśmy w stanie przygotować Państwu najkorzystniejszą ofertę ubezpieczeniową, w pełni spełniającą Państwa wymagania.'
+                        content: [
+                            {
+                                content: 'Nasza firma zajmuje się również '
+                            },
+                            {
+                                tag: 'strong',
+                                content: 'ubezpieczeniami'
+                            },
+                            {
+                                content:
+                                    ' komunikacyjnymi, na życie oraz nieruchomości. Współpracujemy z kilkoma największymi firmami działającymi w Polsce, dlatego jesteśmy w stanie przygotować Państwu najkorzystniejszą ofertę ubezpieczeniową, w pełni spełniającą Państwa wymagania.'
+                            }
+                        ]
                     }
                 ]}
             />
@@ -51,8 +76,28 @@ const IndexPage = ({ data }) => {
                         content:
                             'Stale uczestniczymy w szkoleniach branżowych, dzięki czemu nasi klienci mogą być pewni, że nasza wiedza jest na bieżąco udoskonalana. Nasze kwalifikacje i doświadczenie sprawiają, że powierzone nam zadania są szybko i profesjonalnie załatwiane.'
                     }
-                ]}
-            />
+                ]}>
+                <div className='highlights'>
+                    {[addressCard, chartLine, landmark, tasks].map(
+                        (icon, index) => (
+                            <section key={index}>
+                                <div class='content'>
+                                    <header>
+                                        <div className='icon-wrapper'>
+                                            <img
+                                                src={icon}
+                                                alt='icon'
+                                                className='icon'
+                                            />
+                                        </div>
+                                        <h3>Szybki Czas Realizacji</h3>
+                                    </header>
+                                </div>
+                            </section>
+                        )
+                    )}
+                </div>
+            </Section>
             <Section
                 id='section3'
                 title='REJESTRACJA POJAZDÓW'
@@ -103,7 +148,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
     query {
-        banner: file(relativePath: { eq: "cars-banner.jpg" }) {
+        banner: file(relativePath: { eq: "city-cars.jpg" }) {
             childImageSharp {
                 fluid(quality: 90, maxWidth: 1920) {
                     ...GatsbyImageSharpFluid_withWebp
